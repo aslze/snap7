@@ -1,1 +1,1 @@
-Windows Solution
+Windows Visual Studio Solution
