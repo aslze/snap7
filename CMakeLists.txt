@@ -22,3 +22,7 @@ else()
 endif()
 
 target_include_directories(snap7 PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/release/wrappers/c-cpp> $<INSTALL_INTERFACE:include>)
+
+install(FILES release/wrappers/c-cpp/snap7.h DESTINATION include)
+install(TARGETS snap7 EXPORT snap7 RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
+install(EXPORT snap7 DESTINATION cmake)
